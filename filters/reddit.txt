@@ -1,0 +1,57 @@
+! Title: serene — reddit
+! Expires: 1 day
+! Description: cosmetic filters for reddit.com
+! Last modified: 06 Apr 2025 19:31 UTC
+! Homepage: https://github.com/fiords/serene
+! License: https://github.com/fiords/serene/blob/main/LICENSE
+
+! cta
+! post actions
+reddit.com##comment-composer-host
+reddit.com##faceplate-tracker[source="shreddit_comment_count_button"]
+reddit.com##shreddit-post-overflow-menu
+
+! cta
+! subreddit actions
+reddit.com##button.button-small.join-btn,button.button-x-small.join-btn
+
+! feed
+! trending posts carousel
+reddit.com##search-dynamic-id-cache-controller[search-telemetry-source="popular_carousel"]
+
+! misc
+! tracking events
+reddit.com##+js(aeld, track-event, /(?i:beacon|impression|promo)/)
+
+! navbar
+! navbar buttons
+reddit.com##header > nav span[data-part="advertise"]
+reddit.com##header > nav span[data-part="campaign"]
+reddit.com##header > nav span[data-part="create"]
+reddit.com##header > nav span[data-part="primary"] > faceplate-tracker[noun="login"]
+
+! navbar
+! user drawer (anonymous)
+reddit.com###user-drawer-content:has(faceplate-tracker[noun="login"]) faceplate-tracker[noun="advertise"]
+reddit.com###user-drawer-content:has(faceplate-tracker[noun="login"]) faceplate-tracker[noun="avatar_shop"]
+reddit.com###user-drawer-content:has(faceplate-tracker[noun="login"]) faceplate-tracker[noun="try_reddit_pro"]
+
+! navbar
+! user drawer (with account)
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > hr:has(+ ul:has(faceplate-tracker[noun="advertise"]))
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > hr:has(+ ul:has(faceplate-tracker[noun="premium_menu"]))
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > ul > faceplate-tracker[noun="contributor_program"]
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > ul > faceplate-tracker[noun="edit_avatar"]
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > ul > faceplate-tracker[source="achievements"]
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > ul:has(faceplate-tracker[noun="advertise"])
+reddit.com###user-drawer-content:not(:has(faceplate-tracker[noun="login"])) > ul:has(faceplate-tracker[noun="premium_menu"])
+
+! sidebar
+! left sidebar (ensure centered layout)
+reddit.com##:is(.grid-container:not(.grid-full), .grid-container:not(.grid-full).flex-nav-expanded):has(#right-sidebar-container aside[aria-label*="Information" i]):style(--flex-nav-width: 32px !important; --transition-duration: 0ms !important; --transition-curve: linear(0, 1) !important)
+reddit.com###left-sidebar-container
+
+! sidebar
+! right sidebar
+reddit.com###right-sidebar-container > :not(#right-sidebar-contents)
+reddit.com###right-sidebar-contents > :not(aside[aria-label*="information" i], :has(aside[aria-label*="information" i]))
