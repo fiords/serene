@@ -1,7 +1,7 @@
 ! Title: serene — reddit
 ! Expires: 1 day
 ! Description: cosmetic filters for reddit.com
-! Last modified: 06 Apr 2025 19:31 UTC
+! Last modified: 06 Apr 2025 18:59 UTC
 ! Homepage: https://github.com/fiords/serene
 ! License: https://github.com/fiords/serene/blob/main/LICENSE
 
@@ -9,6 +9,7 @@
 ! post actions
 reddit.com##comment-composer-host
 reddit.com##faceplate-tracker[source="shreddit_comment_count_button"]
+reddit.com##shreddit-post div[slot="recommendation-overlay"]
 reddit.com##shreddit-post-overflow-menu
 
 ! cta
