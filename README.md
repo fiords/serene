@@ -8,7 +8,7 @@ filter lists for a (subjectively) less-intrusive internet.
 
 ## notes
 
-lists use [uBlock Origin](https://github.com/gorhill/uBlock).
+some lists require [uBlock Origin](https://github.com/gorhill/uBlock) for all features to work.
 
 ## contributing
 
