@@ -26,6 +26,7 @@ reddit.com##+js(aeld, track-event, /(?i:beacon|impression|promo)/)
 
 ! navbar
 ! navbar buttons
+reddit.com##header > nav faceplate-tracker[data-faceplate-tracking-context*="qr_upsell"]
 reddit.com##header > nav span[data-part="advertise"]
 reddit.com##header > nav span[data-part="campaign"]
 reddit.com##header > nav span[data-part="create"]
