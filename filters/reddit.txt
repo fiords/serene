@@ -1,7 +1,7 @@
 ! Title: serene — reddit
 ! Expires: 1 day
 ! Description: cosmetic filters for reddit.com
-! Last modified: 05 Sep 2025 11:29 UTC
+! Last modified: 05 Sep 2025 11:44 UTC
 ! Homepage: https://github.com/fiords/serene
 ! License: https://github.com/fiords/serene/blob/main/LICENSE
 
@@ -17,8 +17,9 @@ reddit.com##shreddit-post-overflow-menu
 reddit.com##button.button-small.join-btn,button.button-x-small.join-btn
 
 ! feed
-! trending posts carousel
+! trending posts / searches
 reddit.com##search-dynamic-id-cache-controller[search-telemetry-source="popular_carousel"]
+reddit.com###search-dropdown-results-container:has(#reddit-trending-searches-partial-container:not(.hidden))
 
 ! misc
 ! tracking events
@@ -56,3 +57,4 @@ reddit.com###left-sidebar-container
 ! right sidebar
 reddit.com###right-sidebar-container > :not(#right-sidebar-contents)
 reddit.com###right-sidebar-contents > :not(aside[aria-label*="information" i], :has(aside[aria-label*="information" i]))
+
