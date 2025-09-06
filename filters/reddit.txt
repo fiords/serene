@@ -1,9 +1,12 @@
 ! Title: serene — reddit
 ! Expires: 1 day
 ! Description: cosmetic filters for reddit.com
-! Last modified: 05 Sep 2025 11:52 UTC
+! Last modified: 06 Sep 2025 19:00 UTC
 ! Homepage: https://github.com/fiords/serene
 ! License: https://github.com/fiords/serene/blob/main/LICENSE
+
+! chat
+reddit.com##rs-discover-channels-link
 
 ! cta
 ! post actions
@@ -62,5 +65,3 @@ reddit.com###left-sidebar-container
 ! right sidebar
 reddit.com###right-sidebar-container > :not(#right-sidebar-contents)
 reddit.com###right-sidebar-contents > :not(aside[aria-label*="information" i], :has(aside[aria-label*="information" i]))
-
-
