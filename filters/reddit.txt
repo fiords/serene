@@ -40,6 +40,7 @@ reddit.com##header > nav faceplate-tracker[data-faceplate-tracking-context*="qr_
 reddit.com##header > nav span[data-part="advertise"]
 reddit.com##header > nav span[data-part="campaign"]
 reddit.com##header > nav span[data-part="create"]
+reddit.com##header > nav span[data-part="secondary"]
 reddit.com##header > nav span[data-part="primary"] > faceplate-tracker[noun="login"]
 
 ! navbar
@@ -65,3 +66,4 @@ reddit.com###left-sidebar-container
 ! right sidebar
 reddit.com###right-sidebar-container > :not(#right-sidebar-contents)
 reddit.com###right-sidebar-contents > :not(aside[aria-label*="information" i], :has(aside[aria-label*="information" i]))
+
