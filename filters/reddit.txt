@@ -1,12 +1,16 @@
 ! Title: serene — reddit
 ! Expires: 1 day
 ! Description: cosmetic filters for reddit.com
-! Last modified: 06 Sep 2025 19:00 UTC
+! Last modified: 23 Aug 2026 14:15 UTC
 ! Homepage: https://github.com/fiords/serene
 ! License: https://github.com/fiords/serene/blob/main/LICENSE
 
 ! chat
 reddit.com##rs-discover-channels-link
+
+! cta
+! login
+reddit.com###desktop-dynamic-upsell-dialog
 
 ! cta
 ! post actions
@@ -18,9 +22,6 @@ reddit.com##shreddit-post-overflow-menu
 ! cta
 ! subreddit actions
 reddit.com##button.button-small.join-btn,button.button-x-small.join-btn
-
-! cta
-! subreddit actions (anonymous)
 reddit.com##body:has( nav #login-button ) create-post-entry-point-wrapper
 reddit.com##body:has( nav #login-button ) shreddit-subreddit-header-buttons
 
