@@ -1,70 +1,41 @@
 ! Title: serene — reddit
 ! Expires: 1 day
 ! Description: cosmetic filters for reddit.com
-! Last modified: 23 Aug 2026 14:15 UTC
+! Last modified: 31 Aug 2026 20:11 UTC
 ! Homepage: https://github.com/fiords/serene
 ! License: https://github.com/fiords/serene/blob/main/LICENSE
 
 ! chat
 reddit.com##rs-discover-channels-link
 
-! cta
-! login
+! modal
 reddit.com###desktop-dynamic-upsell-dialog
 
-! cta
-! post actions
-reddit.com##comment-composer-host
-reddit.com##faceplate-tracker[source="shreddit_comment_count_button"]
-reddit.com##shreddit-post div[slot="recommendation-overlay"]
-reddit.com##shreddit-post-overflow-menu
-
-! cta
-! subreddit actions
-reddit.com##button.button-small.join-btn,button.button-x-small.join-btn
-reddit.com##body:has( nav #login-button ) create-post-entry-point-wrapper
-reddit.com##body:has( nav #login-button ) shreddit-subreddit-header-buttons
-
-! feed
-! trending posts / searches
-reddit.com##search-dynamic-id-cache-controller[search-telemetry-source="popular_carousel"]
-reddit.com###search-dropdown-results-container:has(#reddit-trending-searches-partial-container:not(.hidden))
-
-! misc
-! tracking events
-reddit.com##+js(aeld, track-event, /(?i:beacon|impression|promo)/)
-reddit.com##faceplate-perfmetric-collector
+! media
+www.reddit.com##shreddit-player > div[slot="recommendation-overlay"]
 
 ! navbar
-! navbar buttons
-reddit.com##header > nav faceplate-tracker[data-faceplate-tracking-context*="qr_upsell"]
-reddit.com##header > nav span[data-part="advertise"]
-reddit.com##header > nav span[data-part="campaign"]
-reddit.com##header > nav span[data-part="create"]
-reddit.com##header > nav span[data-part="secondary"]
-reddit.com##header > nav span[data-part="primary"] > faceplate-tracker[noun="login"]
+www.reddit.com###navbar-menu-button
+www.reddit.com##header > nav > :last-child > :not(:has(rpl-dropdown))
+www.reddit.com###user-drawer-content > ul > *:not(:has(li#login-list-item))
 
-! navbar
-! user drawer (bulk)
-reddit.com###user-drawer-content > hr:not(:first-of-type):not(:last-of-type)
-reddit.com###user-drawer-content > ul:not(:first-of-type):not(:last-of-type)
+! post
+www.reddit.com##shreddit-post shreddit-join-button
+www.reddit.com##shreddit-async-loader[bundlename="shreddit_post_overflow_menu"]
+www.reddit.com##shreddit-post-overflow-menu
+www.reddit.com##shreddit-post-share-button
+www.reddit.com###unpacked-actions > *:not(a[data-item-id="comments"])
+www.reddit.com##body:has( nav #login-button ) create-post-entry-point-wrapper
 
-! navbar
-! user drawer (targeted)
-reddit.com###user-drawer-content > ul:first-of-type > faceplate-tracker[noun="advertise"]
-reddit.com###user-drawer-content > ul:first-of-type > faceplate-tracker[noun="edit_avatar"]
-reddit.com###user-drawer-content > ul:first-of-type > faceplate-tracker[noun="premium_menu"]
-reddit.com###user-drawer-content > ul:first-of-type > faceplate-tracker[noun="try_reddit_pro"]
-reddit.com###user-drawer-content > ul:first-of-type > faceplate-tracker[source="achievements"]
-reddit.com###user-drawer-content > ul:first-of-type > faceplate-tracker[source="earn"]
+! search
+www.reddit.com###reddit-trending-searches-partial-container
 
 ! sidebar
-! left sidebar (layout fix)
 reddit.com##:is(.grid-container:not(.grid-full), .grid-container:not(.grid-full).flex-nav-expanded):has(#right-sidebar-container aside[aria-label*="Information" i]):style(--flex-nav-width: 32px !important; --transition-duration: 0ms !important; --transition-curve: linear(0, 1) !important)
-reddit.com###left-sidebar-container
+www.reddit.com##faceplate-tracker[source="community"] > shreddit-join-button
+www.reddit.com###right-sidebar-container > :not(#right-sidebar-contents)
+www.reddit.com###right-sidebar-contents > :not(aside[aria-label*="information" i], :has(aside[aria-label*="information" i]))
 
-! sidebar
-! right sidebar
-reddit.com###right-sidebar-container > :not(#right-sidebar-contents)
-reddit.com###right-sidebar-contents > :not(aside[aria-label*="information" i], :has(aside[aria-label*="information" i]))
-
+! subreddit
+www.reddit.com##body:has( nav #login-button ) create-post-entry-point-wrapper
+www.reddit.com##body:has( nav #login-button ) shreddit-subreddit-header-buttons
